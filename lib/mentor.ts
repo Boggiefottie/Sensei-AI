@@ -1,9 +1,22 @@
- export const mentors = [
+ export type Mentor = {
+  id: number;
+
+  name: string;
+
+  anime: string;
+
+  image: string;
+
+  quote?: string;
+ }
+ 
+ export const mentors : Mentor[] = [
     {
       id: 1,
       name: "Gojo", 
       anime: "Jujutsu Kaisen",
-      image: "/gojo.png"
+      image: "/gojo.png",
+      quote: "Throughout Heaven and Earth, I Alone Am The Honored One."
     },
     {
       id: 2,

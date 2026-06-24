@@ -2,7 +2,7 @@
 import MentorCard from "@/components/MentorCard";
 import { mentors } from "@/lib/mentor";
 import { useState } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export default function HomePage() {
  
@@ -25,7 +25,8 @@ export default function HomePage() {
       </p>
       <button
         disabled={selectedMentor === null}
-        className="
+        onClick={()=>router.push(`/chat/${selectedMentor}`)}
+        className=" cursor-pointer
         px-4 py-2 rounded
         bg-purple-500 text-white
         disabled:bg-gray-400
