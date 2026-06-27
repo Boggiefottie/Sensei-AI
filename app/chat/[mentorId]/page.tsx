@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { mentors } from "@/lib/mentor";
 import Image from "next/image";
-
+import ChatInterface from "@/components/ChatInterface";
 export default async function ChatPage({
   params,
 }: {
@@ -21,7 +21,7 @@ export default async function ChatPage({
   }
 
   return (
-    <div className="flex justify-center"> 
+    <div className="flex flex-col items-center gap-4 justify-center"> 
     <Card>
     <CardContent className="flex flex-col items-center text-center" >
     <Image
@@ -48,6 +48,7 @@ export default async function ChatPage({
     </button>
     </CardContent>    
     </Card>
+    <ChatInterface mentor={mentor}/>
     </div>
   
 );
